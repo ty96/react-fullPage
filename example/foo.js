@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Proptypes } from 'react';
 import ReactDOM from 'react-dom';
-import { ScrollPage, Section } from './dist/bundle';
+import { ScrollPage, Section } from '../src';
 
 class Foo extends Component {
+  static propTypes = {};
+  constructor(props, context) {
+    super(props, context);
+    this.state = {};
+  }
+
   render() {
     return (
       <ScrollPage

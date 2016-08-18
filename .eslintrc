@@ -6,11 +6,6 @@
     "eol-last": 0,
     "no-eval": 0,
     "no-restricted-syntax": 0,
-    "no-debugger": 1,
-  },
-  settings: {
-    import/resolver: {
-      webpack: {config: 'webpack/base.js'}
-    }
+    "no-debugger": 1
   }
 }

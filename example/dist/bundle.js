@@ -56,7 +56,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _ScrollPage = __webpack_require__(175);
+	var _src = __webpack_require__(175);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69,43 +69,46 @@
 	var Foo = function (_Component) {
 	  _inherits(Foo, _Component);
 
-	  function Foo() {
+	  function Foo(props, context) {
 	    _classCallCheck(this, Foo);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Foo).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Foo).call(this, props, context));
+
+	    _this.state = {};
+	    return _this;
 	  }
 
 	  _createClass(Foo, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        _ScrollPage.ScrollPage,
+	        _src.ScrollPage,
 	        {
 	          curPage: 1,
 	          totalPage: 5
 	        },
 	        _react2.default.createElement(
-	          _ScrollPage.Section,
+	          _src.Section,
 	          null,
 	          'Page1'
 	        ),
 	        _react2.default.createElement(
-	          _ScrollPage.Section,
+	          _src.Section,
 	          null,
 	          'Page2'
 	        ),
 	        _react2.default.createElement(
-	          _ScrollPage.Section,
+	          _src.Section,
 	          null,
 	          'Page3'
 	        ),
 	        _react2.default.createElement(
-	          _ScrollPage.Section,
+	          _src.Section,
 	          null,
 	          'Page4'
 	        ),
 	        _react2.default.createElement(
-	          _ScrollPage.Section,
+	          _src.Section,
 	          null,
 	          'Page5'
 	        )
@@ -115,6 +118,9 @@
 
 	  return Foo;
 	}(_react.Component);
+
+	Foo.propTypes = {};
+
 
 	var app = document.getElementById('app');
 
@@ -21467,7 +21473,7 @@
 
 	var _ScrollPage2 = _interopRequireDefault(_ScrollPage);
 
-	var _Section = __webpack_require__(181);
+	var _Section = __webpack_require__(182);
 
 	var _Section2 = _interopRequireDefault(_Section);
 
@@ -21485,9 +21491,27 @@
 	  value: true
 	});
 
+	var _ScrollPage = __webpack_require__(177);
+
+	var _ScrollPage2 = _interopRequireDefault(_ScrollPage);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _ScrollPage2.default;
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _style = __webpack_require__(177);
+	var _style = __webpack_require__(178);
 
 	var _style2 = _interopRequireDefault(_style);
 
@@ -21611,16 +21635,16 @@
 	exports.default = ScrollPage;
 
 /***/ },
-/* 177 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(178);
+	var content = __webpack_require__(179);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(180)(content, {});
+	var update = __webpack_require__(181)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -21637,10 +21661,10 @@
 	}
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(179)();
+	exports = module.exports = __webpack_require__(180)();
 	// imports
 
 
@@ -21653,7 +21677,7 @@
 	};
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports) {
 
 	/*
@@ -21709,7 +21733,7 @@
 
 
 /***/ },
-/* 180 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -21961,7 +21985,7 @@
 
 
 /***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21970,7 +21994,7 @@
 	  value: true
 	});
 
-	var _Section = __webpack_require__(182);
+	var _Section = __webpack_require__(183);
 
 	var _Section2 = _interopRequireDefault(_Section);
 
@@ -21979,7 +22003,7 @@
 	exports.default = _Section2.default;
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21990,7 +22014,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _style = __webpack_require__(183);
+	var _style = __webpack_require__(184);
 
 	var _style2 = _interopRequireDefault(_style);
 
@@ -22039,23 +22063,23 @@
 	exports.default = Section;
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(184);
+	var content = __webpack_require__(185);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(180)(content, {});
+	var update = __webpack_require__(181)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?modules!./style.css", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?modules!./style.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules!./style.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22065,19 +22089,19 @@
 	}
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(179)();
+	exports = module.exports = __webpack_require__(180)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "._12o8E8lXfdHXTbpaX-b10V {\n  transition: transform 1s ease 0s;\n  background-color: lightyellow;\n  font-size: 200px;\n  position: relative;\n}", ""]);
+	exports.push([module.id, "._3XOPbCxqpa6hpd7LCv1WKD {\n  transition: transform 1s ease 0s;\n  position: relative;\n}", ""]);
 
 	// exports
 	exports.locals = {
-		"son": "_12o8E8lXfdHXTbpaX-b10V"
+		"son": "_3XOPbCxqpa6hpd7LCv1WKD"
 	};
 
 /***/ }

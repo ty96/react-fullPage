@@ -1,6 +1,4 @@
 .son {
   transition: transform 1s ease 0s;
-  background-color: lightyellow;
-  font-size: 200px;
   position: relative;
 }
