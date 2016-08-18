@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "eol-last": 0,
+    "no-eval": 0,
+    "no-restricted-syntax": 0,
+    "no-debugger": 1,
+  },
+  settings: {
+    import/resolver: {
+      webpack: {config: 'webpack/base.js'}
+    }
+  }
+}
