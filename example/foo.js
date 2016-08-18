@@ -1,6 +1,6 @@
 import React, { Component, Proptypes } from 'react';
 import ReactDOM from 'react-dom';
-import { ScrollPage, Section } from '../src';
+import { ScrollPage, Section } from '../dist';
 
 class Foo extends Component {
   static propTypes = {};
