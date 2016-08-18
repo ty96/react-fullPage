@@ -8,7 +8,7 @@
 ```
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { ScrollPage, Section } from '/dist/bundle';
+import { ScrollPage, Section } from '/dist';
 
 class Foo extends Component {
   render() {
