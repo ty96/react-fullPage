@@ -48,13 +48,14 @@ npm install
 cd ./example
 webpack
 
-That's it! 
+// That's it! Open example/index.html directly.
 ```
 
 ## API
 ```
 window.turnTo(number);
-document.turnTo(number);
 
-// 0 < number < totalPage
+// 0 < number <= totalPage
+
 ```
+If `number < 0 || number > totalPage` , it will <span style="color: orange">not print any error</span> but keep scrolling to target position. `transform to window.innerHeight * number`
