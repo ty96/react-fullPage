@@ -1,4 +1,3 @@
-import style from './style.css';
 import React, { Component, PropTypes } from 'react';
 
 class ScrollPage extends Component {
@@ -82,7 +81,12 @@ class ScrollPage extends Component {
 
   render() {
     return (
-      <div className={style.box}>
+      <div style={{
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+        position: 'fixed',
+      }}>
         {this.props.children}
       </div>
     );

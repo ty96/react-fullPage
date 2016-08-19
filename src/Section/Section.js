@@ -1,4 +1,3 @@
-import style from './style.css';
 import React, { Component, PropTypes } from 'react';
 
 class Section extends Component {
@@ -13,7 +12,10 @@ class Section extends Component {
 
   render() {
     return (
-      <section className={style.son}>
+      <section style={{
+        transition: 'transform 1s ease 0s',
+        position: 'relative',
+      }}>
         {this.props.children}
       </section>
     );
