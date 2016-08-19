@@ -4,11 +4,14 @@
 * Follow ESlint (Airbnb)
 * Adapt to our [generator-modation](https://github.com/zhaozhiming/generator-modation) (It's a comfortable react-redux generator)
 
-## How to use?
+## Install
+
+`npm install react-scrollpage`
+
+## Usage
+
 ```
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { ScrollPage, Section } from '/dist';
+import { ScrollPage, Section } from 'react-scrollpage';
 
 class Foo extends Component {
   render() {
@@ -35,12 +38,11 @@ class Foo extends Component {
 }
 
 var app = document.getElementById('app');
-
 ReactDOM.render(<Foo />, app);
 ```
 
 
-## How to run example?
+## Example
 
 ```
 npm install
@@ -58,4 +60,4 @@ window.turnTo(number);
 // 0 < number <= totalPage
 
 ```
-If `number < 0 || number > totalPage` , it will <span style="color: orange">not print any error</span> but keep scrolling to target position. `transform to window.innerHeight * number`
+If `number < 0 || number > totalPage` , it will not print any error but keep scrolling to target position. `transform to window.innerHeight * number`
