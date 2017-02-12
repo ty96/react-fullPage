@@ -4,8 +4,14 @@ class ScrollPage extends Component {
   static propTypes = {
     curPage: PropTypes.number.isRequired,
     totalPage: PropTypes.number.isRequired,
+    onPageChange: PropTypes.func,
+    delay: PropTypes.number,
     children: PropTypes.any,
   };
+
+  static defaultProps = {
+    delay: 1200
+  }
 
   constructor(props) {
     super(props);
@@ -13,6 +19,7 @@ class ScrollPage extends Component {
       curPage: this.props.curPage,
       totalPage: this.props.totalPage,
     };
+    this.onPageChange = this.props.onPageChange;
   }
 
   componentDidMount() {
@@ -76,7 +83,10 @@ class ScrollPage extends Component {
     }
     this.removeWheelEvent();
 
-    setTimeout(this.addWheelEvent.bind(this), 1200);
+    setTimeout(() => {
+      this.addWheelEvent();
+      this.onPageChange && this.onPageChange(this.state.curPage);
+    }, this.props.delay);
   }
 
   render() {
