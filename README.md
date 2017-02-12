@@ -15,10 +15,17 @@ import { ScrollPage, Section } from 'react-scrollpage';
 
 class Foo extends Component {
   render() {
+
+    const options = {
+      curPage: 1,           // inital page number, most 1
+      totalPage: 4,         // totoal page number
+      onPageChange,         // callback function when page changed with curPage specifed
+      delay: 1200           // delay between two scoll animation
+    }
+
     return (
       <ScrollPage
-        curPage={1}
-        totalPage={4}
+        {...options}
       >
         <Section>
           Page1
