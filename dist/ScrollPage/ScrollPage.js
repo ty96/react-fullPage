@@ -30,6 +30,7 @@ var ScrollPage = function (_Component) {
       curPage: _this.props.curPage,
       totalPage: _this.props.totalPage
     };
+    _this.onPageChange = _this.props.onPageChange;
     return _this;
   }
 
@@ -94,6 +95,8 @@ var ScrollPage = function (_Component) {
   }, {
     key: 'turnTo',
     value: function turnTo(num) {
+      var _this2 = this;
+
       this.setState({ curPage: num });
       var translatey = 'translatey(-' + window.innerHeight * (num - 1) + 'px)';
       var length = document.getElementsByTagName('section').length;
@@ -102,7 +105,10 @@ var ScrollPage = function (_Component) {
       }
       this.removeWheelEvent();
 
-      setTimeout(this.addWheelEvent.bind(this), 1200);
+      setTimeout(function () {
+        _this2.addWheelEvent();
+        _this2.onPageChange && _this2.onPageChange(_this2.state.curPage);
+      }, this.props.delay);
     }
   }, {
     key: 'render',
@@ -126,6 +132,11 @@ var ScrollPage = function (_Component) {
 ScrollPage.propTypes = {
   curPage: _react.PropTypes.number.isRequired,
   totalPage: _react.PropTypes.number.isRequired,
+  onPageChange: _react.PropTypes.func,
+  delay: _react.PropTypes.number,
   children: _react.PropTypes.any
+};
+ScrollPage.defaultProps = {
+  delay: 1200
 };
 exports.default = ScrollPage;
